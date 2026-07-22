@@ -393,6 +393,10 @@ ingress:
   ##             name: http
   ##
   extraRules: []
+## Prometheus monitor configuration
+monitoring:
+  ## Enable the creation of a ServiceMonitor object for Stream if the cluster has the monitoring.coreos.com/v1 capability
+  enabled: true
 ## Configure the Play secret for the Stream instance.
 ## As this is used for cryptographic purposes, it should be fetched
 ## from the environment.
