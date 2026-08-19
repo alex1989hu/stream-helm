@@ -171,3 +171,23 @@ tests:
       - equal:
           path: spec.template.spec.dnsPolicy
           value: ClusterFirstWithHostNet
+
+  - it: should render enableServiceLinks by default
+    template: deployment.yml
+    asserts:
+      - isKind:
+          of: Deployment
+      - equal:
+          path: spec.template.spec.enableServiceLinks
+          value: true
+
+  - it: should render enableServiceLinks when disabled
+    template: deployment.yml
+    set:
+      enableServiceLinks: false
+    asserts:
+      - isKind:
+          of: Deployment
+      - equal:
+          path: spec.template.spec.enableServiceLinks
+          value: false
