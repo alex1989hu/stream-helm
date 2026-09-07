@@ -46,7 +46,7 @@ image:
   ## Stream image repository
   repository: stream
   ## Stream image tag (immutable tags are recommended)
-  tag: 2.1.11
+  tag: 2.1.12
   ## Stream image flavor (for HSM compatible images)
   flavor: ""
   ## Stream image pull policy
@@ -530,7 +530,6 @@ temporaryDatabase:
     pullPolicy: IfNotPresent
     ## MongoDB image pull secrets
     pullSecrets: []
-
   persistence:
     ## Whether to enable persistence on the temporary MongoDB
     enabled: true
@@ -587,7 +586,7 @@ upgrade:
     ## Stream image repository
     repository: stream-upgrade
     ## Stream image tag (immutable tags are recommended)
-    tag: 2.1.11
+    tag: 2.1.12
     ## Stream image pull policy
     pullPolicy: IfNotPresent
     ## Stream image pull secrets
@@ -790,7 +789,6 @@ backup:
 ##       - key: stream-secret-key
 ##         name: stream-secret-name
 extraObjects: []
-
 ## Enable Prometheus metrics
 metrics:
   ## Whether to enable Prometheus metrics
